@@ -22,6 +22,17 @@ Here are steps to get the route engine ready for use.
 
 Now repeat steps 1 and 2 for changing folder names accordingly. The same folder should change in step 3 when running the job when using the slurm code. 
 
-Now that map data and files are in the proper place, calculations should become routine. 
+## Protocol
+
+Now that map data and files are in the proper place, calculations should become routine. The proximity.R file is an example of R code used to calculate distance and duration between locations useing two data frames. Data frame one has the "from" coordinates, and data frame two has the "to" coordinates. Other arguments are specified and unique to the users dataset column names, and profile being used. 
+
+A work flow might like like this
+
+* (1) Use SCP to transfer data sets into a working directory
+* (2) edit slurm code to match the names in the datasets and choose where to save the output
+* (3) run the job and perform checks like making sure the terminal of the computer running the job is producing sensible results
+
+
+
 
 
