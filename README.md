@@ -1,5 +1,5 @@
 # osrm-slurm
-Here are a list of slurm code and R functions to calculate proximity metrics using a high performance computer in a job based framework
+Here are a list of slurm code and R functions to calculate proximity metrics using a high performance computer (HPC) in a job based framework. This protocol is set up such that an osrm machine can have time to start up in the background when using a HPC to then take http requests from R code. 
 
 ## Route Engine Setup
 Here are steps to get the route engine ready for use. 
@@ -20,6 +20,8 @@ Here are steps to get the route engine ready for use.
 
 `singularity exec --bind "${PWD}/data_car:/data_car" osrm.sif osrm-routed --algorithm mld /data_car/us-latest.osrm`
 
-Now repeat steps 1 and 2 for the other profiles and change folder names accordingly in step 3. 
+Now repeat steps 1 and 2 for changing folder names accordingly. The same folder should change in step 3 when running the job when using the slurm code. 
+
+Now that map data and files are in the proper place, calculations should become routine. 
 
 
